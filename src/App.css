@@ -1,0 +1,52 @@
+/*---------reset--------*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color:white;
+  color: black;
+}
+ul{
+  list-style: none;
+}
+input{
+  padding: 5px;
+  border: 1px solid dodgerblue;
+  color: dodgerblue;
+}
+button {
+  display: inline-block;
+  cursor: pointer;
+  font-family:inherit ;
+  text-align: center;
+  border-radius: 5px;
+}
+input{
+  padding: 5px;
+  color: gray;
+  border: 1px solid;
+}
+button{
+  border: none;
+  padding: 3px 9px;
+}
+/* ----app----- */
+
+.app_header{
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.app_container {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-evenly;
+  gap:20px;
+}

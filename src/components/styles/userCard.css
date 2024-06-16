@@ -1,0 +1,61 @@
+.usercard{
+background-color:white;
+color: black;
+width: 250px;
+border: 1px solid;
+padding: 20px;
+border-radius: 10px;
+display: flex;
+flex-direction: column;
+gap: 5px;
+}
+.usercard_name{
+    padding-bottom:5px ;
+}
+.usercard_list{
+    padding: 5px o;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.usercard_item{
+    font-weight: 900;
+    display: flex;
+    flex-direction: column;
+}
+.usercard_item span:first-child{
+    color: #999;
+}
+.usercard_buttons{
+    padding-top: 5px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+ .usercard_buttons button{
+    font-size: 1.5rem;
+ }
+ .usercard_buttons button::after{
+    content:'delete';
+    color: rgb(60, 3, 113);
+    font-size: 1rem;
+    font-weight: 900;
+    position: absolute;
+    opacity:0;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    transition: bottom .5s,
+                 opacity .5s;
+ }
+ .usercard_buttons button:hover::after{
+    bottom: 150%;
+    opacity: 1;
+    transition: bottom .5s,
+                 opacity .5s;
+ }
+ .usercard_btn_delete{
+    background-color: red;
+    color: white;
+    content:'delete';
+ }
