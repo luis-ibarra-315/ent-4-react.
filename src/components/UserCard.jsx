@@ -3,14 +3,17 @@ import './styles/userCard.css';
 
 const UserCard = ({user,deleteUser,setUpdate,setIsShow}) => {
 
-    const handleDelete = () => {
-     deleteUser('/users',user.id);
+    const handleDelete = async () => {
+     await deleteUser('/users',user.id);
+    
     }
 
     const handleEdit = () => {
       setUpdate(user);
       setIsShow(true);
+
     }
+    
 
   return (
     <article className='usercard'>

@@ -5,7 +5,7 @@ const urlBase = 'https://users-crud.academlo.tech'
 const useCRUD = () => {
     const [apiData, setapiData] = useState();
 
-    const getApi = (path) => {
+    const getApi = (path) =>{
         const url = `${urlBase}${path}/`;
         axios.get(url)
             .then(res => setapiData(res.data))
@@ -21,17 +21,21 @@ const useCRUD = () => {
     const deleteApi = (path,id) => {
         const url = `${urlBase}${path}/${id}/`;
         axios.delete(url)
-             .then(() => setapiData(
-                apiData.filter((user) => user.id!==id)
-             ))
+             .then(() =>{ setapiData(
+                apiData.filter((user) => user.id!==id))
+                 alert('you are going to delete user.')
+            })
              .catch(err => console.log(err));
     }
     const patchApi = (path,id,data) => {
         const url = `${urlBase}${path}/${id}/`;
         axios.patch(url,data)
-             .then(res => setapiData(apiData.map(
+             .then(res => {setapiData(apiData.map(
                 (user) => user.id===id ? res.data : user
-             )))
+))
+ alert('you have edited user')
+
+})
              .catch(err => console.log(err));
     }
 
